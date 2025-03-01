@@ -1,0 +1,568 @@
+.modal {
+  z-index: 1050; /* Default Bootstrap z-index for modals */
+}
+.modal-backdrop {
+  z-index: -1; /* Default Bootstrap z-index for the backdrop */
+}
+.modal-header {
+  background-color: lightblue;
+}
+.modal-body small {
+  font-size: 0.8rem;
+}
+.form-switch {
+  margin-bottom: 10px;
+}
+.modal-footer {
+  justify-content: space-between;
+}
+
+
+
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav li {
+    margin-right: 20px;
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 10px;
+    /* Add padding to create space for the border */
+    border: 2px solid transparent;
+    /* Initial transparent border */
+
+}
+
+
+
+
+.navbar-nav a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+/*top and bottom*/
+.navbar-nav a::before,
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    background-color: red;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav a::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.navbar-nav a::after {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+/* el mafrod left and right*/
+.navbar-nav a span::before,
+.navbar-nav a span::after {
+    content: '';
+    position: absolute;
+    background-color: red;
+    transition: transform 0.6s ease-in-out;
+    /* Slower speed for top and bottom */
+}
+
+.navbar-nav a span::before {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.navbar-nav a span::after {
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.navbar-nav a:hover::before,
+.navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-nav a:hover span::before,
+.navbar-nav a:hover span::after {
+    transform: scaleY(1);
+}
+
+
+
+
+
+
+
+
+   /* Slider Styles */
+   .carousel {
+    height: 100vh;
+  }
+
+  .carousel-item {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .carousel-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(173, 216, 230, 0.5); /* Light blue with 0.5 opacity */
+  }
+
+  .carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+    text-align: center;
+  }
+
+  .carousel-caption h2 {
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  .carousel-caption p {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .carousel-caption .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+
+  /* Social Media Icons Styles */
+  .social-icons {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    z-index: 1000;
+  }
+
+  .social-icons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    color: #000;
+    transition: background-color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    background-color: #f0f0f0;
+  }
+
+  .social-icons i {
+    font-size: 1.5rem;
+  }
+
+
+
+
+.baby-blue-bg {
+  background-color: #89CFF0; /* Baby blue color */
+  height: 20vh; /* 20% of the viewport height */
+  display: flex;
+}
+.main-title-bg {
+  background-color: #f8f9fa; /* Light gray background for the second rectangle */
+  height: 10vh; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/*page3*/
+
+.title-rectangle {
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+  background-color: #007bff; /* Example color */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.content-box {
+  background-color: #2367b1; /* Matching the title color */
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.content-box a {
+  color: white;
+  text-decoration: underline;
+}
+.big-rectangle {
+  width: 100%;
+  height: 200px; /* Adjust the height as needed */
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.copy-button {
+  margin-top: 10px;
+}
+#myLabel{
+display: none;
+}
+
+.parallax1 {
+  background-image: url(../image.jpg);
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height:300px;
+}
+/* home7*/
+
+.card-container1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card-container1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.overlay-top-left, .overlay-bottom-right {
+  position: absolute;
+  background-color: rgba(0, 0, 255, 0.7);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.overlay-top-left {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(-100%, -100%);
+}
+
+.overlay-bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(100%, 100%);
+}
+
+.card-container1:hover .overlay-top-left,
+.card-container1:hover .overlay-bottom-right {
+  opacity: 0.5;
+  transform: translate(0, 0);
+}
+
+.card-container1:hover img {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body h2 {
+  margin-top: 0;
+}
+
+.card-body p {
+  margin-bottom: 10px;
+}
+
+.btn-know-more {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-know-more:hover {
+  background-color: #0056b3;
+}
+/* home7*/
+
+/* Basic styling for the card container */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adds a gap between the cards */
+  padding: 20px;
+}
+
+/* Styling for each card */
+.card {
+  width: calc((100% / 3) - 20px); /* Adjusts the width to fit 3 cards per line */
+  height: 400px; /* Adjust the height as needed */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Example background images for each card */
+.card:nth-child(1) {
+  background-image: url('../person1.jpg');
+}
+.card:nth-child(2) {
+  background-image: url('../person2.jpg');
+}
+.card:nth-child(3) {
+  background-image: url('../person3.jpg');
+}
+
+/* Styling for the card overlay */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Styling for the card content */
+.card-overlay h1 {
+  font-size: 36px;
+  margin: 0 0 20px;
+}
+
+.card-overlay h4 {
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+
+.card-overlay h3 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.card-overlay h5 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Styling for the oval image */
+.oval-image {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+/* Example background images for the oval image */
+.card:nth-child(1) .oval-image {
+  background-image: url('../person1.jpg');
+}
+.card:nth-child(2) .oval-image {
+  background-image: url('../person2.jpg');
+}
+.card:nth-child(3) .oval-image {
+  background-image: url('../person3.jpg');
+}
+
+
+/* Hover effect to increase card size */
+.card:hover {
+    transform: scale(1.1); /* Increases the size of the card on hover */
+}
+
+.card-img-top, .card-img-bottom {
+  height: 150px;
+  object-fit: cover;
+}
+.line {
+  border-top: 2px solid #000;
+  margin: 20px 0;
+}
+
+/* home11*/
+
+.post-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.post-card:hover {
+  transform: scale(1.05);
+}
+
+.post-card img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-content h1 {
+  margin-top: 0;
+}
+
+.post-content p {
+  margin-bottom: 10px;
+}
+
+.post-content .calendar {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #343a40;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.post-content .calendar:hover {
+  /*background-color: #007bff;*/
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 5px;
+}
+
+.post-content .btn {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-content .btn:hover {
+  background-color: #0056b3;
+}
+
+.post-content .btn i {
+  margin-right: 5px;
+}
+/* home 12*/
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  margin-left: 10%;
+}
+
+.square:hover {
+  transform: scale(1.05);
+}
+
+.square h2 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.square i {
+  font-size: 36px;
+  color: #007bff;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.square .go-link {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.square .go-link:hover {
+  text-decoration: underline;
+}
+
